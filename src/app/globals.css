@@ -1,41 +1,42 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-ivory: #f7f5f0;
-  --color-paper: #ffffff;
-  --color-ink: #171715;
-  --color-charcoal: #333330;
-  --color-taupe: #b7aa98;
-  --color-stone: #d9d5ce;
-  --color-olive: #41483a;
+  --color-ivory: #070707;
+  --color-paper: #111111;
+  --color-ink: #f3f0e8;
+  --color-charcoal: #c9c3b8;
+  --color-taupe: #8e897f;
+  --color-stone: #2a2a28;
+  --color-olive: #f3f0e8;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-serif: var(--font-cormorant), "Iowan Old Style", Palatino, "Palatino Linotype", serif;
+  --font-serif: var(--font-bodoni), Didot, "Bodoni MT", "Times New Roman", serif;
 }
 
 html {
   scroll-behavior: smooth;
+  color-scheme: dark;
 }
 
 body {
-  background: #f7f5f0;
-  color: #171715;
+  background: #070707;
+  color: #f3f0e8;
   font-family: var(--font-sans);
   text-rendering: optimizeLegibility;
 }
 
 ::selection {
-  background: #171715;
-  color: #f7f5f0;
+  background: #f3f0e8;
+  color: #070707;
 }
 
 :focus-visible {
-  outline: 2px solid #171715;
+  outline: 2px solid #f3f0e8;
   outline-offset: 3px;
 }
 
 .bg-ink:focus-visible,
 .bg-olive:focus-visible {
-  outline-color: #b7aa98;
+  outline-color: #070707;
 }
 
 .nav-link {
@@ -46,7 +47,7 @@ body {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -0.35rem;
+  bottom: -0.4rem;
   width: 100%;
   height: 1px;
   background: currentColor;

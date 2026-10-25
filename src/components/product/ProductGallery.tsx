@@ -10,7 +10,7 @@ export function ProductGallery({ images, name }: { images: GalleryImage[]; name:
 
   return (
     <div>
-      <div className="relative aspect-[3/4] bg-[#e7e1d8]">
+      <div className="relative aspect-[3/4] bg-paper">
         <ProductImage
           src={current?.src ?? ""}
           alt={current?.alt ?? name}
@@ -27,7 +27,7 @@ export function ProductGallery({ images, name }: { images: GalleryImage[]; name:
                 aria-label={`Show image ${index + 1} of ${name}`}
                 aria-current={index === active}
                 onClick={() => setActive(index)}
-                className={`relative block h-20 w-16 bg-[#e7e1d8] ${index === active ? "outline outline-1 outline-ink" : ""}`}
+                className={`relative block h-20 w-16 bg-paper ${index === active ? "outline outline-1 outline-ink" : ""}`}
               >
                 <ProductImage src={image.src} alt="" sizes="80px" />
               </button>

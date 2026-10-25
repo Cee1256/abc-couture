@@ -43,7 +43,7 @@ async function CollectionContent({ params }: { params: Promise<{ slug: string }>
 
   return (
     <>
-      <div className="relative min-h-[52vh] bg-[#e7e1d8]">
+      <div className="relative min-h-[52vh] bg-paper">
         <ProductImage
           src={collection.image}
           alt={collection.imageAlt}

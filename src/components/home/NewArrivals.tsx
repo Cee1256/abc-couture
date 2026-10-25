@@ -1,27 +1,20 @@
 import { ProductGrid } from "@/components/shop/ProductGrid";
-import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
-import { SectionHeading } from "@/components/ui/SectionHeading";
 import { getNewArrivals } from "@/lib/products";
+import Link from "next/link";
 
 export function NewArrivals() {
   const products = getNewArrivals(8);
   return (
-    <section className="pb-16 sm:pb-24">
+    <section className="border-t border-stone py-14 sm:py-16">
       <Container>
-        <SectionHeading
-          eyebrow="Just arrived"
-          title="New arrivals"
-          text="A short list of pieces added to the current edit."
-          action={
-            <Button href="/shop?new=1" variant="line">
-              View all new arrivals
-            </Button>
-          }
-        />
-        <div className="mt-10">
-          <ProductGrid products={products} />
+        <div className="mb-8 flex items-end justify-between gap-4">
+          <h2 className="font-serif text-3xl uppercase tracking-[0.12em] sm:text-4xl">New arrivals</h2>
+          <Link href="/shop?new=1" className="shrink-0 text-[11px] uppercase tracking-[0.16em] underline underline-offset-4">
+            View all
+          </Link>
         </div>
+        <ProductGrid products={products} />
       </Container>
     </section>
   );

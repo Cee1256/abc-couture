@@ -4,7 +4,7 @@ import { ProductImage } from "@/components/ui/ProductImage";
 export function EditorialSection() {
   return (
     <section className="grid lg:grid-cols-12">
-      <div className="relative min-h-[70vh] bg-[#e7e1d8] lg:col-span-7">
+      <div className="relative min-h-[70vh] bg-paper lg:col-span-7">
         <ProductImage
           src="/images/library/1589156280159-27698a70f29e.jpg"
           alt="A woman in a white sweatshirt looking over a city at dusk"

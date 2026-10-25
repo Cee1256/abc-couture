@@ -17,7 +17,7 @@ export function CartItem({ line, compact = false }: { line: CartLine; compact?: 
 
   return (
     <article className="grid grid-cols-[5.5rem_1fr] gap-4 border-b border-stone py-5 sm:grid-cols-[7rem_1fr]">
-      <Link href={`/products/${product.slug}`} aria-label={product.name} className="relative block aspect-[3/4] bg-[#e7e1d8]">
+      <Link href={`/products/${product.slug}`} aria-label={product.name} className="relative block aspect-[3/4] bg-paper">
         <ProductImage
           src={product.images[0]?.src ?? ""}
           alt={product.images[0]?.alt ?? product.name}

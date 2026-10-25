@@ -21,8 +21,8 @@ export function ProductImage({
 
   if (failed) {
     return (
-      <div className="absolute inset-0 flex items-end bg-[#e7e1d8] p-4">
-        <span className="font-serif text-2xl leading-none text-ink/75">{alt}</span>
+      <div className="absolute inset-0 flex items-end bg-paper p-4">
+        <span className="font-serif text-2xl leading-none text-ink">{alt}</span>
       </div>
     );
   }

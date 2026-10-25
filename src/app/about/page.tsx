@@ -1,100 +1,59 @@
-import { Button } from "@/components/ui/Button";
-import { Container } from "@/components/ui/Container";
-import { ProductImage } from "@/components/ui/ProductImage";
-import { brand } from "@/config/brand";
 import { pageMetadata } from "@/lib/metadata";
+import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
-export const metadata = pageMetadata(
-  "About the brand",
-  "The point of view behind ABC Couture: considered clothes, clear shapes, and nothing invented about the studio’s past.",
-  "/about",
-);
-
-const principles = [
-  {
-    number: "01",
-    title: "Proportion",
-    text: "A shoulder, a hem, a sleeve. If the shape is right, the piece does not need decoration.",
-  },
-  {
-    number: "02",
-    title: "Cloth",
-    text: "Colour and texture should be readable up close. The edit prefers cloth you would wear twice in a week.",
-  },
-  {
-    number: "03",
-    title: "Restraint",
-    text: "Fewer pieces, chosen carefully. A wardrobe can be expressive without being loud.",
-  },
-];
+export const metadata = pageMetadata("About the brand", "Less noise. More you. The Maison Noir point of view.", "/about");
 
 export default function AboutPage() {
   return (
-    <>
-      <Container className="py-12 sm:py-16">
-        <p className="text-[11px] uppercase tracking-[0.22em] text-taupe">{brand.tagline}</p>
-        <h1 className="mt-4 max-w-4xl font-serif text-5xl leading-[0.95] sm:text-7xl">
-          Dressing, considered.
-        </h1>
-      </Container>
-      <div className="relative min-h-[60vh] bg-[#e7e1d8]">
-        <ProductImage
-          src="/images/library/1441984904996-e0b6ba687e04.jpg"
-          alt="Clothing rails in a bright room, used here as an editorial photograph"
-          sizes="100vw"
-          priority
-          className="object-cover"
-        />
+    <div className="page-shell">
+      <section className="about-hero">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1800&q=90" alt="Maison Noir fashion editorial" />
+        <div>
+          <span className="eyebrow lime">OUR POINT OF VIEW</span>
+          <h1>
+            LESS NOISE.
+            <br />
+            <em>MORE YOU.</em>
+          </h1>
+        </div>
+      </section>
+      <section className="about-copy">
+        <span className="eyebrow">THE HOUSE / EST. 2026</span>
+        <h2>
+          WE&apos;RE NOT HERE TO
+          <br />
+          TELL YOU WHO TO BE.
+          <br />
+          <em>JUST WHAT TO WEAR.</em>
+        </h2>
+        <div>
+          <p>Maison Noir began with a simple idea: getting dressed should feel less like a performance and more like coming into yourself.</p>
+          <p>We make considered wardrobe pieces with clear silhouettes, tactile materials and a quiet confidence. Not trend-led. Not disposable. Just good design that earns its place in your everyday.</p>
+          <p>Our approach is deliberate: fewer distractions, better choices, and a little more room to be entirely your own.</p>
+          <Link href="/shop" className="button button-outline">
+            EXPLORE THE WARDROBE <ArrowUpRight size={15} />
+          </Link>
+        </div>
+      </section>
+      <div className="about-values">
+        <div>
+          <b>01</b>
+          <h3>INTENTION</h3>
+          <p>Every detail has a reason to be there.</p>
+        </div>
+        <div>
+          <b>02</b>
+          <h3>LONGEVITY</h3>
+          <p>Designed to stay in rotation, season after season.</p>
+        </div>
+        <div>
+          <b>03</b>
+          <h3>INDIVIDUALITY</h3>
+          <p>Clothes should serve your point of view, not replace it.</p>
+        </div>
       </div>
-      <Container className="grid gap-12 py-16 lg:grid-cols-12">
-        <div className="lg:col-span-5">
-          <h2 className="font-serif text-4xl leading-none">A point of view, not a history.</h2>
-        </div>
-        <div className="max-w-xl space-y-5 text-sm leading-7 text-charcoal lg:col-span-6 lg:col-start-7">
-          <p>
-            {brand.name} is a clothing and accessories studio for people who prefer clarity. The edit is small on purpose: tailored forms, considered cloth, and pieces that can be worn again tomorrow.
-          </p>
-          <p>
-            The work is for warm days, long evenings, and the confidence of getting dressed with less. Nothing here asks you to perform. The clothes should feel precise, then disappear into the day.
-          </p>
-          <p>
-            This page introduces that point of view. It is not a company history. It does not claim awards, certifications, a founding year, or a street address, because none of those have been supplied.
-          </p>
-        </div>
-      </Container>
-      <section className="border-t border-stone">
-        <Container className="grid gap-10 py-16 md:grid-cols-3">
-          {principles.map((principle) => (
-            <article key={principle.number}>
-              <p className="font-serif text-4xl text-taupe">{principle.number}</p>
-              <h2 className="mt-4 font-serif text-3xl">{principle.title}</h2>
-              <p className="mt-3 text-sm leading-6 text-charcoal">{principle.text}</p>
-            </article>
-          ))}
-        </Container>
-      </section>
-      <section className="grid lg:grid-cols-2">
-        <div className="relative min-h-[60vh] bg-[#e7e1d8]">
-          <ProductImage
-            src="/images/library/1490481651871-ab68de25d43d.jpg"
-            alt="Light shirts and knits hanging in a row"
-            sizes="(min-width: 1024px) 50vw, 100vw"
-            className="object-cover"
-          />
-        </div>
-        <div className="flex flex-col justify-center px-4 py-14 sm:px-10">
-          <h2 className="font-serif text-4xl leading-none sm:text-5xl">Quality is repetition.</h2>
-          <p className="mt-5 max-w-md text-sm leading-7 text-charcoal">
-            A piece earns its place when it can be worn on an ordinary Tuesday and still feel right on a Friday. Personal style, here, is the habit of choosing well rather than choosing more.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-6">
-            <Button href="/shop">Shop the edit</Button>
-            <Button href="/contact" variant="line">
-              Contact
-            </Button>
-          </div>
-        </div>
-      </section>
-    </>
+    </div>
   );
 }

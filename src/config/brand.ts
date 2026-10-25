@@ -9,12 +9,11 @@
  * Social profiles stay empty until real accounts are supplied.
  */
 export const brand = {
-  name: "ABC Couture",
-  wordmark: "ABC Couture",
-  tagline: "Wear Your Story",
-  announcement: "Discover the latest edit  |  Effortless style, considered design",
-  description:
-    "ABC Couture is a contemporary fashion storefront for considered clothing and accessories, presented with Ghana cedi pricing.",
+  name: "Maison Noir",
+  wordmark: "Maison Noir",
+  tagline: "Objects of Desire",
+  announcement: "Complimentary shipping on orders over $250",
+  description: "Considered pieces. Lasting presence. Discover modern wardrobe essentials at Maison Noir.",
   market: "Ghana",
   currency: "GHS",
   locale: "en-GH",
@@ -23,9 +22,8 @@ export const brand = {
   phoneTel: "+233232203037",
   whatsappUrl: "https://wa.me/233232203037",
   logo: "/brand/logo.jpg",
-  logoAlt:
-    "ABC Couture monogram above the words ABC Couture and the line Wear Your Story",
-  cartStorageKey: "abc-couture-bag",
+  logoAlt: "Maison Noir wordmark",
+  cartStorageKey: "maison-noir-bag",
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "",
   social: [] as { label: string; href: string }[],
 } as const;

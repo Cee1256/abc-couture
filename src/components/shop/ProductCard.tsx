@@ -30,10 +30,10 @@ export function ProductCard({ product, priority = false }: { product: Product; p
       <Link
         href={`/products/${product.slug}`}
         aria-label={product.name}
-        className="relative block aspect-[3/4] overflow-hidden bg-[#e7e1d8]"
+        className="relative block aspect-[3/4] overflow-hidden bg-paper"
       >
         {product.isNew ? (
-          <span aria-hidden="true" className="absolute left-3 top-3 z-10 bg-ivory px-2 py-1 text-[10px] uppercase tracking-[0.16em]">
+          <span aria-hidden="true" className="absolute left-3 top-3 z-10 bg-ivory px-2 py-1 text-[10px] uppercase tracking-[0.16em] text-ink">
             New
           </span>
         ) : null}
@@ -52,19 +52,19 @@ export function ProductCard({ product, priority = false }: { product: Product; p
       </Link>
       <div className="pt-3">
         <p className="text-[10px] uppercase tracking-[0.16em] text-taupe">{primaryCategory(product)}</p>
-        <h3 className="mt-1 font-serif text-2xl leading-tight">
+        <h3 className="mt-1 text-[13px] font-medium uppercase leading-snug tracking-[0.06em]">
           <Link href={`/products/${product.slug}`} className="hover:underline">
             {product.name}
           </Link>
         </h3>
         <div className="mt-2 flex items-center justify-between gap-3">
-          <Price amount={product.price} className="text-sm" />
+          <Price amount={product.price} className="text-[13px] tracking-wide" />
           {product.availableColors.length > 0 ? (
             <ul className="flex items-center gap-1.5" aria-label="Available colours">
               {product.availableColors.map((color) => (
                 <li key={color.name}>
                   <span
-                    className="block size-2.5 rounded-full border border-stone"
+                    className="block size-3 rounded-full ring-1 ring-inset ring-white/35"
                     style={{ backgroundColor: color.hex }}
                     title={color.name}
                   >

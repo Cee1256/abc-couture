@@ -1,57 +1,41 @@
-import { Container } from "@/components/ui/Container";
-import { ProductImage } from "@/components/ui/ProductImage";
-import { collections } from "@/data/collections";
 import { pageMetadata } from "@/lib/metadata";
-import { getByCollection } from "@/lib/products";
+import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
-export const metadata = pageMetadata(
-  "Collections",
-  "Explore ABC Couture collections, from essentials and evening dressing to contemporary pieces.",
-  "/collections",
-);
+export const metadata = pageMetadata("Collections", "Different moods. One point of view.", "/collections");
+
+const items = [
+  ["01", "THE OUTER LAYER", "Structure for the in-between.", "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1300&q=85", "Outerwear"],
+  ["02", "SOFT STRUCTURES", "Texture with intention.", "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1300&q=85", "Knitwear"],
+  ["03", "FINISHING FORMS", "Small details. Lasting impact.", "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=1300&q=85", "Accessories"],
+] as const;
 
 export default function CollectionsPage() {
   return (
-    <Container className="py-10 sm:py-14">
-      <p className="text-[11px] uppercase tracking-[0.22em] text-taupe">Lookbooks</p>
-      <h1 className="mt-3 max-w-3xl font-serif text-5xl leading-none sm:text-6xl">Collections</h1>
-      <p className="mt-4 max-w-xl text-sm leading-6 text-charcoal">
-        Eight edits, each with its own reason for being. Open one to see only the pieces that belong there.
-      </p>
-      <ul className="mt-12 grid gap-x-6 gap-y-12 sm:grid-cols-2">
-        {collections.map((collection, index) => {
-          const count = getByCollection(collection.slug).length;
-          return (
-            <li key={collection.slug} className={index === 0 ? "sm:col-span-2" : undefined}>
-              <article>
-                <Link href={`/collections/${collection.slug}`} className="group block">
-                  <div className={`relative overflow-hidden bg-[#e7e1d8] ${index === 0 ? "aspect-[16/9] sm:aspect-[21/9]" : "aspect-[4/5] sm:aspect-[4/3]"}`}>
-                    <ProductImage
-                      src={collection.image}
-                      alt={collection.imageAlt}
-                      sizes={index === 0 ? "100vw" : "(min-width: 640px) 50vw, 100vw"}
-                      priority={index === 0}
-                      className="media-zoom object-cover"
-                    />
-                  </div>
-                  <h2 className="mt-4 font-serif text-3xl sm:text-4xl">{collection.name}</h2>
-                </Link>
-                <p className="mt-2 max-w-md text-sm leading-6 text-charcoal">{collection.description}</p>
-                <p className="mt-2 text-[11px] uppercase tracking-[0.16em] text-taupe">
-                  {count} {count === 1 ? "piece" : "pieces"}
-                </p>
-                <Link
-                  href={`/collections/${collection.slug}`}
-                  className="mt-3 inline-block text-[11px] uppercase tracking-[0.16em] underline"
-                >
-                  Explore collection
-                </Link>
-              </article>
-            </li>
-          );
-        })}
-      </ul>
-    </Container>
+    <div className="page-shell">
+      <section className="page-intro">
+        <span className="eyebrow">A WARDROBE IN CHAPTERS</span>
+        <h1>
+          THE <em>COLLECTIONS.</em>
+        </h1>
+        <p>Different moods. One point of view.</p>
+      </section>
+      <div className="collections-list">
+        {items.map(([no, title, desc, img, category]) => (
+          <Link href={`/shop?category=${category}`} className="collection-row" key={no}>
+            <span className="collection-number">{no} / 03</span>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={img} alt={title} />
+            <div>
+              <h2>{title}</h2>
+              <p>{desc}</p>
+              <span className="text-link">
+                EXPLORE COLLECTION <ArrowUpRight size={16} />
+              </span>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </div>
   );
 }

@@ -3,7 +3,7 @@ import { pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata(
   "Shopping bag",
-  "Review pieces in your ABC Couture bag. Checkout is not available on this demonstration storefront.",
+  "Review pieces in your Maison Noir bag. Checkout is not available on this demonstration storefront.",
   "/bag",
 );
 
