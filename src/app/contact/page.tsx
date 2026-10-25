@@ -1,4 +1,4 @@
-import { ContactForm } from "@/components/maison/ContactForm";
+import { ContactForm } from "@/components/bloom/ContactForm";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata("Contact", "Questions, thoughts, or just saying hello.", "/contact");

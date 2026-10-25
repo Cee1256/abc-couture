@@ -10,8 +10,8 @@ export default function Icon() {
         style={{
           width: "100%",
           height: "100%",
-          background: "#070707",
-          color: "#F3F0E8",
+          background: "#1b1017",
+          color: "#ff8fba",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -20,7 +20,7 @@ export default function Icon() {
           fontFamily: "Georgia",
         }}
       >
-        M
+        B
       </div>
     ),
     size,

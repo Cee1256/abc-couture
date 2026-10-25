@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { DM_Mono, Manrope, Oswald } from "next/font/google";
-import { MaisonFooter } from "@/components/maison/Footer";
-import { MaisonHeader } from "@/components/maison/Header";
+import { BloomFooter } from "@/components/bloom/Footer";
+import { BloomHeader } from "@/components/bloom/Header";
 import { CartProvider } from "@/components/cart/CartProvider";
 import { brand } from "@/config/brand";
 import "./globals.css";
-import "../styles/maison.css";
+import "../styles/bloom.css";
+import "../styles/bloom-light.css";
 
 const sans = Manrope({
   subsets: ["latin"],
@@ -52,9 +53,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           Skip to content
         </a>
         <CartProvider>
-          <MaisonHeader />
+          <BloomHeader />
           <main id="content">{children}</main>
-          <MaisonFooter />
+          <BloomFooter />
         </CartProvider>
       </body>
     </html>

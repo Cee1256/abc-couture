@@ -1,0 +1,326 @@
+html {
+  color-scheme: light;
+}
+
+body {
+  background: #fbf6f4;
+  color: #3c2432;
+}
+
+.announcement {
+  background: #f6c9d6;
+  color: #4a2433;
+}
+
+.site-header {
+  background: #fffdfb;
+  border-bottom: 1px solid #f0d5de;
+  color: #3c2432;
+}
+
+.wordmark small {
+  color: #b07a8c;
+}
+
+.nav-links a:hover,
+.text-link:hover {
+  color: #c45b7a;
+}
+
+.hero {
+  color: #fffaf8;
+}
+
+.hero-image.is-campaign {
+  object-position: 46% 22%;
+}
+
+.hero-shade {
+  background:
+    linear-gradient(90deg, rgba(42, 18, 32, 0.58) 0%, rgba(42, 18, 32, 0.16) 46%, rgba(42, 18, 32, 0) 72%),
+    linear-gradient(0deg, rgba(42, 18, 32, 0.18), transparent 28%);
+}
+
+.hero h1 {
+  color: #fffaf8;
+  font-size: clamp(56px, 7vw, 104px);
+}
+
+.hero .eyebrow.lime,
+.about-hero .eyebrow.lime {
+  color: #ffc9d8;
+}
+
+.hero h1 em,
+.about-hero h1 em {
+  color: #ffb7cc;
+}
+
+.hero-copy > p,
+.hero-index,
+.hero-bottom {
+  color: #f7e4ea;
+}
+
+.ticker {
+  background: #f3c3d2;
+  color: #4a2433;
+}
+
+.section {
+  background: #fbf6f4;
+  color: #3c2432;
+}
+
+.eyebrow {
+  color: #a56b80;
+}
+
+.section-heading h2 em,
+.page-intro h1 em,
+.manifesto h2 em,
+.about-copy h2 em {
+  color: #c45b7a;
+}
+
+.category-card img,
+.collection-row > img,
+.manifesto > img,
+.product-image img,
+.detail-image > img,
+.about-hero > img {
+  filter: none;
+}
+
+.category-card,
+.product-image,
+.detail-image {
+  background: #f4ebe6;
+}
+
+.product-section {
+  background: #fff;
+}
+
+.bestsellers {
+  background: #fbf6f4;
+}
+
+.product-tag {
+  background: #3c2432;
+  color: #fffaf8;
+}
+
+.product-quick {
+  background: #fff;
+  color: #c45b7a;
+}
+
+.product-name,
+.product-price {
+  color: #3c2432;
+}
+
+.swatches i {
+  border-color: #e7c9d4;
+}
+
+.manifesto {
+  background: #fff7f8;
+  color: #3c2432;
+}
+
+.manifesto > img {
+  object-position: center 20%;
+}
+
+.manifesto-panel > p,
+.about-copy > div p,
+.detail-description,
+.page-intro p {
+  color: #7d5a68;
+}
+
+.button-light {
+  background: #c45b7a;
+  color: #fff;
+}
+
+.button-light:hover {
+  background: #a84668;
+}
+
+.button-outline {
+  border-color: #e4b7c6;
+  color: #3c2432;
+}
+
+.button-outline:hover {
+  border-color: #c45b7a;
+  color: #c45b7a;
+}
+
+.newsletter {
+  background: #f8d3df;
+  color: #3c2432;
+}
+
+.newsletter .eyebrow {
+  color: #8a4d62;
+}
+
+.newsletter h2 em {
+  color: #9a3d5c;
+}
+
+.email-field {
+  border-bottom-color: #c4899d;
+}
+
+.email-field input,
+.email-field button {
+  color: #3c2432;
+}
+
+.email-field input::placeholder,
+.newsletter form small {
+  color: #8a4d62;
+}
+
+.footer {
+  background: #2a1622;
+  color: #f8eef2;
+}
+
+.footer .wordmark small,
+.footer-brand > p,
+.footer-top > div:last-child > p {
+  color: #e7c9d4;
+}
+
+.footer-top > div:not(:first-child) > a {
+  color: #f0d5e0;
+}
+
+.footer-top > div > a:hover {
+  color: #ffc2d4;
+}
+
+.payment-marks span {
+  border-color: #6a4052;
+  color: #f3dde6;
+}
+
+.footer-bottom {
+  border-top-color: #5a3344;
+  color: #d7b4c2;
+}
+
+.page-intro,
+.about-copy,
+.collection-row,
+.detail-rule,
+.detail-notes,
+.detail-notes p,
+.about-values > div {
+  border-color: #f0d5de;
+}
+
+.page-intro h1,
+.about-copy h2,
+.collection-row h2,
+.detail-copy h1 {
+  color: #3c2432;
+}
+
+.shop-intro,
+.contact-page .page-intro {
+  background: #fff7f8;
+}
+
+.shop-content {
+  background: #fff;
+}
+
+.filter-pills button,
+.size-options button,
+.qty button,
+.bag-remove {
+  border-color: #e7c3d0;
+  color: #3c2432;
+  background: transparent;
+}
+
+.filter-pills button.active,
+.filter-pills button:hover,
+.size-options button.selected,
+.size-options button:hover {
+  background: #c45b7a;
+  border-color: #c45b7a;
+  color: #fff;
+}
+
+.sort-label,
+.result-count,
+.back-link,
+.collection-number,
+.bag-meta,
+.bag-note {
+  color: #8a6574;
+}
+
+.sort-label select,
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  background: #fff;
+  color: #3c2432;
+  border-color: #e7c3d0;
+}
+
+.contact-form label {
+  color: #8a6574;
+}
+
+.contact-form select option {
+  background: #fff;
+  color: #3c2432;
+}
+
+.form-success {
+  color: #a84668;
+}
+
+.about-hero,
+.about-hero h1 {
+  color: #fffaf8;
+}
+
+.bag-row {
+  border-bottom-color: #f0d5de;
+}
+
+@media (max-width: 600px) {
+  .site-header {
+    background: #fffdfb;
+  }
+
+  .nav-links {
+    background: #fff7f8;
+  }
+
+  .nav-links a {
+    border-bottom-color: #f0d5de;
+    color: #3c2432;
+  }
+
+  .hero h1 {
+    font-size: clamp(48px, 13vw, 68px);
+  }
+
+  .hero-shade {
+    background:
+      linear-gradient(90deg, rgba(42, 18, 32, 0.5), rgba(42, 18, 32, 0.08)),
+      linear-gradient(0deg, rgba(42, 18, 32, 0.2), transparent 46%);
+  }
+}

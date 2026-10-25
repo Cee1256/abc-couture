@@ -9,11 +9,11 @@
  * Social profiles stay empty until real accounts are supplied.
  */
 export const brand = {
-  name: "Maison Noir",
-  wordmark: "Maison Noir",
-  tagline: "Objects of Desire",
+  name: "BLOOM",
+  wordmark: "BLOOM",
+  tagline: "Made to Bloom",
   announcement: "Complimentary shipping on orders over $250",
-  description: "Considered pieces. Lasting presence. Discover modern wardrobe essentials at Maison Noir.",
+  description: "Made to be seen. Made to feel like you. Discover modern wardrobe essentials at BLOOM.",
   market: "Ghana",
   currency: "GHS",
   locale: "en-GH",
@@ -22,8 +22,8 @@ export const brand = {
   phoneTel: "+233232203037",
   whatsappUrl: "https://wa.me/233232203037",
   logo: "/brand/logo.jpg",
-  logoAlt: "Maison Noir wordmark",
-  cartStorageKey: "maison-noir-bag",
+  logoAlt: "BLOOM wordmark",
+  cartStorageKey: "bloom-cart",
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "",
   social: [] as { label: string; href: string }[],
 } as const;

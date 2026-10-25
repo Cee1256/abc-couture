@@ -1,16 +1,16 @@
-import { ProductDetail } from "@/components/maison/ProductDetail";
-import { getMaisonProduct, maisonProducts } from "@/lib/maison-products";
+import { ProductDetail } from "@/components/bloom/ProductDetail";
+import { bloomProducts, getBloomProduct } from "@/lib/bloom-products";
 
 export function generateStaticParams() {
-  return maisonProducts.map((product) => ({ slug: product.slug }));
+  return bloomProducts.map((product) => ({ slug: product.slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const product = getMaisonProduct(slug);
+  const product = getBloomProduct(slug);
   return {
     title: product ? product.name : "Piece not found",
-    description: product?.description ?? "This piece is not in the Maison Noir edit.",
+    description: product?.description ?? "This piece is not in the BLOOM edit.",
   };
 }
 

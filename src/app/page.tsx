@@ -1,26 +1,26 @@
-import { Newsletter } from "@/components/maison/Newsletter";
-import { ProductCard } from "@/components/maison/ProductCard";
-import { maisonProducts } from "@/lib/maison-products";
+import { Newsletter } from "@/components/bloom/Newsletter";
+import { ProductCard } from "@/components/bloom/ProductCard";
+import { bloomProducts } from "@/lib/bloom-products";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
 const categories = [
   {
-    name: "THE OUTER LAYER",
-    sub: "Outerwear",
-    img: "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=85",
+    name: "PINK CLOTHING",
+    sub: "Clothing",
+    img: "/bloom/dress.jpg",
     no: "01",
   },
   {
-    name: "FORM & FUNCTION",
-    sub: "Knitwear",
-    img: "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1000&q=85",
+    name: "BAGS",
+    sub: "Bags",
+    img: "/bloom/bag.jpg",
     no: "02",
   },
   {
-    name: "THE FINISHING TOUCH",
+    name: "ACCESSORIES",
     sub: "Accessories",
-    img: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=1000&q=85",
+    img: "/bloom/scarf.jpg",
     no: "03",
   },
 ];
@@ -30,28 +30,24 @@ export default function HomePage() {
     <>
       <section className="hero">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          className="hero-image"
-          src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=2200&q=90"
-          alt="Fashion editorial campaign in a sculptural black look"
-        />
+        <img className="hero-image is-campaign" src="/bloom/hero.jpg" alt="BLOOM campaign in a blush silk dress and rose coat" />
         <div className="hero-shade" />
         <div className="hero-index">CAMPAIGN 06 / AUTUMN—WINTER 26</div>
         <div className="hero-copy">
-          <span className="eyebrow lime">THE NEW UNIFORM</span>
+          <span className="eyebrow lime">THE BLOOM EDIT</span>
           <h1>
-            QUIETLY
+            SOFTLY
             <br />
-            <em>UNMISTAKABLE.</em>
+            <em>UNFORGETTABLE.</em>
           </h1>
-          <p>Modern essentials. Uncompromising point of view.</p>
+          <p>Romantic silhouettes. Modern confidence.</p>
           <Link className="button button-light" href="/collections">
-            DISCOVER THE COLLECTION <ArrowUpRight size={15} />
+            EXPLORE THE COLLECTION <ArrowUpRight size={15} />
           </Link>
         </div>
         <div className="hero-bottom">
           <span>01 — 03&nbsp; / &nbsp;THE FORM STUDY</span>
-          <span>SCROLL TO EXPLORE ↓</span>
+          <span>SCROLL TO BLOOM ↓</span>
         </div>
       </section>
       <div className="ticker">
@@ -64,7 +60,7 @@ export default function HomePage() {
           <div>
             <span className="eyebrow">01 / FIND YOUR FORM</span>
             <h2>
-              THE HOUSE <em>EDIT.</em>
+              THE BLOOM <em>EDIT.</em>
             </h2>
           </div>
           <Link className="text-link" href="/collections">
@@ -101,16 +97,16 @@ export default function HomePage() {
           </Link>
         </div>
         <div className="product-grid">
-          {maisonProducts.slice(0, 4).map((product) => (
+          {bloomProducts.slice(0, 4).map((product) => (
             <ProductCard key={product.slug} product={product} />
           ))}
         </div>
       </section>
       <section className="manifesto">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1400&q=85" alt="Models wearing modern understated fashion" />
+        <img src="/bloom/dress.jpg" alt="Blush silk column dress from the BLOOM edit" />
         <div className="manifesto-panel">
-          <span className="eyebrow lime">A DIFFERENT KIND OF STATEMENT</span>
+          <span className="eyebrow lime">YOUR MOMENT TO BLOOM</span>
           <h2>
             STYLE ISN&apos;T
             <br />
@@ -120,11 +116,11 @@ export default function HomePage() {
             <br />
             <em>LEAVE OUT.</em>
           </h2>
-          <p>We believe in fewer, better things. Pieces that earn their place, move with you, and feel more like yourself every time you wear them.</p>
+          <p>We believe getting dressed should feel like stepping into yourself. Pieces with a little romance, a lot of confidence, and room to make them your own.</p>
           <Link className="button button-outline" href="/about">
-            THE MAISON NOIR POINT OF VIEW <ArrowUpRight size={15} />
+            THE BLOOM POINT OF VIEW <ArrowUpRight size={15} />
           </Link>
-          <span className="manifesto-mark">MN—001</span>
+          <span className="manifesto-mark">BL—001</span>
         </div>
       </section>
       <section className="section product-section bestsellers">
@@ -140,7 +136,7 @@ export default function HomePage() {
           </Link>
         </div>
         <div className="product-grid">
-          {maisonProducts.slice(4, 8).map((product) => (
+          {bloomProducts.slice(4, 8).map((product) => (
             <ProductCard key={product.slug} product={product} />
           ))}
         </div>

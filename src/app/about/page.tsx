@@ -2,25 +2,25 @@ import { pageMetadata } from "@/lib/metadata";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
-export const metadata = pageMetadata("About the brand", "Less noise. More you. The Maison Noir point of view.", "/about");
+export const metadata = pageMetadata("About the brand", "More bloom. More you. The BLOOM point of view.", "/about");
 
 export default function AboutPage() {
   return (
     <div className="page-shell">
       <section className="about-hero">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1800&q=90" alt="Maison Noir fashion editorial" />
+        <img src="/bloom/hero.jpg" alt="BLOOM fashion editorial" />
         <div>
           <span className="eyebrow lime">OUR POINT OF VIEW</span>
           <h1>
-            LESS NOISE.
+            MORE BLOOM.
             <br />
             <em>MORE YOU.</em>
           </h1>
         </div>
       </section>
       <section className="about-copy">
-        <span className="eyebrow">THE HOUSE / EST. 2026</span>
+        <span className="eyebrow">THE BLOOM / EST. 2026</span>
         <h2>
           WE&apos;RE NOT HERE TO
           <br />
@@ -29,9 +29,9 @@ export default function AboutPage() {
           <em>JUST WHAT TO WEAR.</em>
         </h2>
         <div>
-          <p>Maison Noir began with a simple idea: getting dressed should feel less like a performance and more like coming into yourself.</p>
-          <p>We make considered wardrobe pieces with clear silhouettes, tactile materials and a quiet confidence. Not trend-led. Not disposable. Just good design that earns its place in your everyday.</p>
-          <p>Our approach is deliberate: fewer distractions, better choices, and a little more room to be entirely your own.</p>
+          <p>BLOOM began with a simple idea: fashion should make you feel as good as you look.</p>
+          <p>We curate expressive wardrobe pieces with beautiful silhouettes, tactile details and a confident point of view. Romantic without being precious. Bold without trying too hard.</p>
+          <p>Our approach is playful and considered: pieces that lift your mood, work hard in your wardrobe, and let your personality lead.</p>
           <Link href="/shop" className="button button-outline">
             EXPLORE THE WARDROBE <ArrowUpRight size={15} />
           </Link>
